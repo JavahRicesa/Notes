@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Promp2NotesILS" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+    <style name="SCREEN">
+        <item name="android:background">#2E2E2E</item>
+    </style>
+
+    <!-- Texts Background if light mode on -->
+    <style name="TEXT">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="BUTTON">
+        <item name="android:backgroundTint">#FFEB8B</item>
+    </style>
+
+    <style name="SCREEN2">
+        <item name="android:background">#EDCE8B</item>
+    </style>
+
+    <style name="ICON">
+        <item name="colorOnBackground">#FFF6DA</item>
+    </style>
+
+    <style name="button">
+        <item name="backgroundTint">#F4B462</item>
+    </style>
+
+    <style name="hint">
+        <item name="android:textColorHint">#373030</item>
+    </style>
+
+</resources>
