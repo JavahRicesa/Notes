@@ -1,0 +1,49 @@
+public class Notes extends AppCompatActivity {
+    String nameNote;
+    String description;
+    int date;
+
+    public Notes(String nameNote, String description, int date){
+
+    }
+
+
+    ImageView backk3;
+    Button save;
+
+     EditText title, content;
+    @SuppressLint("MissingInflatedId")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_notes);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+        backk3 = findViewById(R.id.bring_Back);
+        save = findViewById(R.id.saveNote);
+        title = findViewById(R.id.e1);
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        backk3.setOnClickListener(v->{
+            Intent intent = new Intent(Notes.this, MainActivity.class);
+            startActivity(intent);
+        });
+        save.setOnClickListener(v -> {
+            String name = title.getText().toString().trim();
+            boolean isValid = true;
+
+            if(name.isEmpty()){
+                title.setError("");
+                isValid = false;
+            }
+        });
+
+    }
+
+}
