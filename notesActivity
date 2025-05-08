@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Notes">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        style="@style/SCREEN2"
+        />
+
+    <View
+        style="@style/SCREEN2"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp" />
+
+    <TextView
+        android:id="@+id/addNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Notes"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="20dp"/>
+
+    <EditText
+        style="@style/hint"
+        android:id="@+id/e1"
+        android:layout_width="400dp"
+        android:layout_height="48dp"
+        android:hint="Title"
+        android:textStyle="bold"
+        android:layout_below="@id/addNotes"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_shape"
+        android:padding="10dp"
+        />
+
+    <EditText
+        style="@style/hint"
+        android:id="@+id/e2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="10"
+        android:hint="Notes.."
+        android:textStyle="bold"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/edit_shape"
+        android:gravity="top"
+        android:padding="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/bring_Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/saveNote"
+        style="@style/button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/e2"
+        android:layout_centerHorizontal="true"
+        android:text="Save Note"
+        android:layout_marginTop="70dp"
+     />
+
+</RelativeLayout>
