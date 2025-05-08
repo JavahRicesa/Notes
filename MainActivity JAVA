@@ -1,0 +1,41 @@
+public class MainActivity extends AppCompatActivity {
+    TextView title2;
+    FloatingActionButton floating;
+
+    ImageView menu;
+
+    ImageView home;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+        menu.findViewById(R.id.menu);
+        floating.findViewById(R.id.floating);
+        home.findViewById(R.id.home);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        floating.setOnClickListener(v->{
+            Intent intent = new Intent(MainActivity.this, Notes.class);
+            startActivity(intent);
+        });
+
+        home.setOnClickListener(v->{
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
+            startActivity(intent);
+        });
+
+        menu.setOnClickListener(v->{
+            Intent intent = new Intent(MainActivity.this, Settings.class);
+            startActivity(intent);
+        });
+    }
+}
